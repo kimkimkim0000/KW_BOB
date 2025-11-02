@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KW BOB 로그인</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>KW BOB 개인 맞춤 추천 서비스 🍱</h1>
+    <section id="login-section">
+      <label>아이디 <input id="loginId" type="text" placeholder="아이디 입력"></label>
+      <label>비밀번호 <input id="loginPw" type="password" placeholder="비밀번호 입력"></label>
+      <button id="loginBtn">로그인</button>
+      <p>계정이 없나요? <a href="#" id="showRegister">회원가입</a></p>
+    </section>
+
+    <section id="register-section" class="hidden">
+      <h2>회원가입</h2>
+      <label>이름 <input id="regName" type="text"></label>
+      <label>아이디 <input id="regId" type="text"></label>
+      <label>비밀번호 <input id="regPw" type="password"></label>
+      <button id="registerBtn">가입하기</button>
+      <p><a href="#" id="showLogin">로그인으로 돌아가기</a></p>
+    </section>
+  </div>
+  <script defer src="script.js"></script>
+</body>
+</html>
