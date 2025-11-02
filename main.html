@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KW BOB 추천</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🍱 KW BOB 추천 시스템</h1>
+    <p id="welcome"></p>
+    <button id="logoutBtn" class="logout">로그아웃</button>
+
+    <section id="user-form">
+      <h2>🍽 음식 선택</h2>
+      <label>식사방식
+        <select id="mealType">
+          <option value="1">직접요리</option>
+          <option value="2">식당식사</option>
+        </select>
+      </label>
+      <label>음식종류
+        <select id="category">
+          <option value="">상관없음</option>
+          <option>한식</option>
+          <option>중식</option>
+          <option>양식</option>
+          <option>분식</option>
+          <option>자취요리</option>
+        </select>
+      </label>
+      <button id="recommendBtn" class="main-btn">추천 받기</button>
+    </section>
+
+    <section id="recommendations" class="hidden">
+      <h2>오늘의 추천 메뉴 🍴</h2>
+      <div id="menu-list" class="menu-container"></div>
+      <div class="btn-group">
+        <button id="retryBtn" class="sub-btn">🔄 다시 추천</button>
+        <button id="viewRecordsBtn" class="sub-btn">📖 기록 보기</button>
+      </div>
+    </section>
+
+    <section id="records" class="hidden">
+      <h2>오늘의 섭취 기록 🧾</h2>
+      <ul id="record-list"></ul>
+      <canvas id="calorieChart"></canvas>
+      <button id="backBtn" class="main-btn">뒤로</button>
+    </section>
+  </div>
+  <script defer src="script.js"></script>
+</body>
+</html>

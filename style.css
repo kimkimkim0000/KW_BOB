@@ -1,0 +1,20 @@
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f8fc;color:#333;margin:0;padding:0}
+.container{max-width:550px;margin:auto;padding:20px}
+h1{text-align:center;color:#4a6cf7;margin-bottom:20px}
+h2{text-align:center;color:#333}
+label{display:block;margin:10px 0;font-weight:500}
+input,select,button{width:100%;padding:10px;margin-top:5px;border-radius:8px;border:1px solid #ccc;font-size:14px}
+button{cursor:pointer;transition:all .2s}
+.main-btn{background:#4a6cf7;color:#fff;border:none}
+.main-btn:hover{background:#3658d5}
+.sub-btn{background:#fff;border:2px solid #4a6cf7;color:#4a6cf7}
+.sub-btn:hover{background:#4a6cf7;color:#fff}
+.logout{background:#f44336;color:#fff;border:none;margin-bottom:15px}
+.hidden{display:none}
+.menu-container{display:flex;flex-direction:column;gap:10px}
+.menu-card{background:#fff;padding:15px;border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,0.1);animation:fadeIn .5s ease-in-out}
+.menu-card h3{margin:0 0 5px 0;font-size:18px}
+.menu-card p{margin:3px 0;font-size:14px}
+.menu-card:hover{transform:scale(1.02)}
+.btn-group{display:flex;justify-content:space-between;margin-top:20px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
