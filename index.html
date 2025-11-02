@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>KW BOB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="https://www.kw.ac.kr/ko/img/sub/bi_symbol01.png" alt="KW Logo" class="logo">
+    <h1>🍱 KW BOB 추천 시스템</h1>
+
+    <section id="user-form">
+      <h2>사용자 정보 입력</h2>
+      <label>이름 <input id="name" type="text" required></label>
+      <label>성별
+        <select id="gender"><option value="M">남</option><option value="F">여</option></select>
+      </label>
+      <label>나이 <input id="age" type="number" value="22"></label>
+      <label>키(cm) <input id="height" type="number" value="170"></label>
+      <label>몸무게(kg) <input id="weight" type="number" value="65"></label>
+      <label>목표
+        <select id="goal">
+          <option value="유지">유지</option><option value="감량">감량</option><option value="증량">증량</option>
+        </select>
+      </label>
+      <label>식사방식
+        <select id="mealType">
+          <option value="1">직접요리</option><option value="2">식당식사</option>
+        </select>
+      </label>
+      <label>음식종류
+        <select id="category">
+          <option value="">상관없음</option><option>한식</option><option>중식</option>
+          <option>양식</option><option>분식</option><option>자취요리</option>
+        </select>
+      </label>
+      <button id="recommendBtn">추천 받기</button>
+    </section>
+
+    <section id="recommendations" class="hidden">
+      <h2>추천 메뉴</h2>
+      <ul id="menu-list"></ul>
+      <button id="retryBtn">다시 추천</button>
+      <button id="viewRecordsBtn">오늘의 기록 보기</button>
+    </section>
+
+    <section id="records" class="hidden">
+      <h2>오늘의 섭취 기록</h2>
+      <ul id="record-list"></ul>
+      <canvas id="calorieChart"></canvas>
+      <button id="backBtn">뒤로</button>
+    </section>
+  </div>
+
+  <script>
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("service-worker.js");
+  </script>
+</body>
+</html>
